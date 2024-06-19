@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title> ROBOTICA - Automação </title>
+  </head>
+  <body class="normal">
+    <!-- SVG Filters -->
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="tritanopia">
+        <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+      </filter>
+    </svg>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img src="img/Logo1.png" alt="" />
+          </a>
+        </div>
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="sustentavel.html">Sustentavel</a>
+          </li>
+          <li>
+            <a href="educacional.html">Educacional</a>
+          </li>
+          <li>
+            <a href="automacao.html">Automação</a>
+          </li>
+        </ul>
+
+        <div class="controls">
+          <select id="colorblindness-selector">
+            <option value="normal">Normal</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+          </select>
+        </div>
+    </nav>
+    <center>
+      <div class="carrossel">
+        <div class="container">
+          <img src="img/Slide/11.png" alt="" />
+          <img src="img/Slide/16.png"" alt="" />
+          <img src="img/Slide/17.png"" alt="" />
+
+        </div>
+      </div>
+       <!-- Inicio do código de libras -->
+       <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+<!-- Fim do código de libras -->
+      <br>
+      <br>
+      <h1>Automação</h1>
+      <br>
+      <h2>
+        Automação utiliza tecnologias para realizar tarefas sem intervenção humana, aumentando eficiência e precisão. 
+        Aplicada em manufatura, logística e serviços, melhora produtividade e reduz custos. Inclui robótica, inteligência artificial e controle de processos. Contribui para sustentabilidade ao otimizar recursos e reduzir desperdícios.</h2>
+                   </h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <img src="img/GIF VERDE.gif" alt="">
+      <br>
+      <br>
+      <br>
+      <H1>Empresas</H1>
+    </center>
+    <div class="slider">
+      <div class="slider-items">
+          <img src="img/automacao/sch.png"
+              alt="">
+          <img src="img/automacao/sie.png"
+              alt="">
+          <img src="img/automacao/tesl.jpg"
+              alt="">
+          <img src="img/automacao/om.png"
+              alt="">
+          <img src="img/automacao/rock.png"
+              alt="">
+              
+      </div>
+  </div>
+
+    <script>
+      // Slider functionality
+      const box = document.querySelector(".container");
+      const imagens = document.querySelectorAll(".container img");
+
+      let contador = 0;
+
+      function slider() {
+        contador++;
+
+        if (contador > imagens.length - 1) {
+          contador = 0;
+        }
+
+        box.style.transform = `translateX(${-contador * 1900}px)`;
+      }
+
+      setInterval(slider, 2000);
+
+      // Fonte size functionality
+      let currentFontSize = 16;
+
+      function increaseFontSize() {
+          currentFontSize += 2;
+          document.body.style.fontSize = currentFontSize + 'px';
+      }
+
+      function decreaseFontSize() {
+          currentFontSize -= 2;
+          document.body.style.fontSize = currentFontSize + 'px';
+      }
+
+      // Daltonism filter functionality
+      document.getElementById('colorblindness-selector').addEventListener('change', function() {
+        document.body.className = this.value;
+      });
+    </script>
+      <br>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+      <div>
+    <div class="divider"></div>
+    <footer class="footer">
+      <div class="footer-container">
+        <CENTER>
+        <p>© 2024 ROBOT. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </CENTER>
+    <script src="script.js"></script>
+
+     <style>
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em; /* Tamanho grande para cabeçalho */
+    font-weight: 700; /* Peso da fonte (bold) */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    line-height: 1.2; /* Espaçamento entre linhas */
+    color: #080707; /* Cor do texto */
+    text-align: center; /* Alinhamento centralizado */
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+    border: 2px solid #080707;; /* Adiciona uma borda */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+  h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em; /* Tamanho pode ser ajustado conforme necessário */
+    font-weight: 600; /* Peso da fonte */
+    line-height: 1.2; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+
+
+     </style>
+  </body>
+</html>
